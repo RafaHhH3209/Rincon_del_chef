@@ -13653,7 +13653,6 @@ html .dtp .invisible {
   }
   
 
-
   @media (max-width: 768px) {
 	.imagenesP {
 		display: none;
@@ -13682,4 +13681,25 @@ html .dtp .invisible {
 	vertical-align: middle;
 	user-select: none;
 	transition: 250ms all ease-in-out;
+}
+
+
+@media (max-width: 768px) {
+	.botonResponsivo {
+		max-width: 155px;
+		align-items: start;
+		margin: 0;
+	}
+	.texto-responsivo
+	{
+		font-size: 10px;
+		margin-left: 0px;
+		padding: 10px;
+	}
+}
+
+.botonResponsivo
+{
+	position: relative;
+	overflow: hidden;
 }
