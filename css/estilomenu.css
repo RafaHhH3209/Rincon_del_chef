@@ -1,12 +1,18 @@
 .presentacion{
-    font-family: "Playfair Display SC", serif;
   font-weight: 600;
   font-style: italic;
+  font-family: "Parkinsans", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  text-align: center;
+  justify-content: center;
+  padding: 10pc, 0,0,50pc;
 }
 .description{
     height: 25px;
     overflow: hidden;
     transition: height .3s ease-in .3s ;
+    
 }
 .description:hover{
     height: 80px;
@@ -39,4 +45,9 @@
     font-weight: 700;
     margin-right:30px ;
     margin-bottom: 20px;
+}
+
+.descr
+{
+    font-size: 2pc;
 }
