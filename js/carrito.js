@@ -1,21 +1,42 @@
-let carrito = [];
-let total = 0;
+const Clickbutton = document.querySelectorAll('.button')
+const tbody = document.querySelector('.tbody')
+let carrito = []
 
-function agregarAlCarrito(producto, precio) {
-    carrito.push({ producto, precio });
-    total += precio;
-    actualizarCarrito();
-}
+Clickbutton.forEach(btn =>{
+    btn.addEventListener('click',addToCarritoItem)
+})
 
-function actualizarCarrito() {
-    const carritoDiv = document.getElementById('carrito');
-    carritoDiv.innerHTML = '';
+function addToCarritoItem(e){
+    const button = e.target
+    const item = button.closest('.card')
+    const itemTitle = item.querySelector('.card-title').textContent;
+    const itemPrice = item.querySelector('.precio').textContent;
+    const itemImg = item.querySelector('.imagen').src;
     
-    carrito.forEach(item => {
-        const productoDiv = document.createElement('div');
-        productoDiv.textContent = `${item.producto} - $${item.precio.toFixed(2)}`;
-        carritoDiv.appendChild(productoDiv);
-    });
+    
 
-    document.getElementById('total').textContent = total.toFixed(2);
+    const newItem = {
+        title : itemTitle,
+        precio : itemPrice,
+        img: itemImg,
+        cantidad : 1
+    }
+    addItemCarritoItem(newItem)
 }
+function addItemCarritoItem(newItem){
+    
+   
+    carrito.push(newItem)
+   
+    renderCarrito()
+}
+
+function renderCarrito(){
+    tbody.innerHTML = ''
+    carrito.map(item => {
+        const tr = document.createElement('tr')
+        tr.classList.add('ItemCarrito')
+    })
+    console.log(carrito)
+}
+
