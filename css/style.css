@@ -1857,8 +1857,10 @@ a[href*='tel'], a[href*='mailto'] {
 
 .box-default-text {
 	display: inline-block;
-	max-width: 550px;
+	max-width: 900px;
 	letter-spacing: -0.03em;
+	font-size: 30px;
+	padding-top: 20px;
 }
 
 .box-default-decor + .box-default-text {
@@ -13704,3 +13706,50 @@ html .dtp .invisible {
 	overflow: hidden;
 }
 
+.BotonMenu
+{
+    align-items: center;
+    justify-content: center;
+	position: relative;
+	overflow: hidden;
+	display: inline-block;
+	padding: 14px 35px;
+	font-size: 15px;
+	line-height: 1.25;
+	border: 1px solid;
+	border-radius: 2px;
+	font-family: "Poppins", sans-serif;
+	font-weight: 600;
+	text-transform: uppercase;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	text-align: center;
+	cursor: pointer;
+	vertical-align: middle;
+	user-select: none;
+	transition: 250ms all ease-in-out;
+}
+.BotonMenu a
+{
+	width: 20pc;
+}
+
+.ubicacion {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+}
+
+iframe {
+    border: 0;
+}
+
+.ubicacion-text
+{
+	text-align: center;
+	justify-content: center;
+	letter-spacing: 0.01em;
+	padding-bottom: 10px;
+	font-size: 3pc;
+}

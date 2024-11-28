@@ -25,6 +25,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Parkinsans:wght@300..800&family=Varela+Round&display=swap" rel="stylesheet">
     <!-- CSS -->
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/funcionamiento_carrito.css">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   </head>
@@ -37,6 +38,9 @@
             <p>Loading...</p>
         </div>
     </div>
+
+
+
     <div class="page"><a class="section section-banner d-none d-xl-flex"></a>
         <header class="section page-header">
             <!-- RD Navbar-->
@@ -63,7 +67,63 @@
                           </li>
                           <li class="rd-nav-item"><a class="rd-nav-link" href="contacts.html">Contactanos aquí</a>
                           </li>
-                          <li class="rd-nav-item"><a class="rd-nav-link" href="carrito.html">Carrito de compras</a>
+                          <li class="rd-nav-item">			<div class="container-icon">\
+                          <!--CARRITO DE COMPRAS-->
+                          <div class="container-icon">
+                            <div class="container-cart-icon">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke-width="1.5"
+                                stroke="currentColor"
+                                class="icon-cart"
+                              >
+                                <path
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z"
+                                />
+                              </svg>
+                              <div class="count-products">
+                                <span id="contador-productos">0</span>
+                              </div>
+                            </div>
+                    
+                            <div class="container-cart-products hidden-cart">
+                              <div class="row-product hidden">
+                                <div class="cart-product">
+                                  <div class="info-cart-product">
+                                    <span class="cantidad-producto-carrito">1</span>
+                                    <p class="titulo-producto-carrito"></p>
+                                    <span class="precio-producto-carrito"></span>
+                                  </div>
+                                  <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    fill="none"
+                                    viewBox="0 0 24 24"
+                                    stroke-width="1.5"
+                                    stroke="currentColor"
+                                    class="icon-close"
+                                  >
+                                    <path
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                      d="M6 18L18 6M6 6l12 12"
+                                    />
+                                  </svg>
+                                </div>
+                              </div>
+                    
+                              <div class="cart-total hidden">
+                                <h3>Total:</h3>
+                                <span class="total-pagar">$200</span>
+                              </div>
+                              <p class="cart-empty">El carrito está vacío</p>
+                            </div>
+                          </div>
+                            
+                           <!--HASTA AQUI-->
                           </li>
                         </ul>
                   </div>
@@ -99,434 +159,392 @@
                       <li class="nav-item" role="presentation"><a class="nav-link" href="#tabs-1-3" data-toggle="tab">Postres</a></li>
                       <li class="nav-item" role="presentation"><a class="nav-link" href="#tabs-1-4" data-toggle="tab">Bebidas</a></li>
                     </ul>
-                    <!-- ENTRADA -->
+                    <!-- ENTRADA -->  
+                     <!-- Contenido de las pestañas -->
                     <div class="tab-content">
-                      <div class="tab-pane fade show active" id="tabs-1-1">
-                        <div class="row row cols-sm-1 row cols-md-2 row cols-lg-3  row cols-xl-4">
-                          <div class="col d-flex justify-content-center mb-4">
-                            <div class="card shadow mb-1  rounded" style="width: 20rem;">
-                              <h5 class="card-title pt-2 text-center ">Candied Tomato bruschetta</h5>
-                              <img  class="imagen" src="images/entrada1.jpg" class="card-img-top" alt="...">
-                              <div class="card-body  ">
-                                <h5 class="text">
-                                  Precio: <span class=precio>20 Bs</span>
-                                </h5>
-                                <p class="card-text  text-black-50 description">Pan tostado cubierto con tomates caramelizados, albahaca fresca y aceite de oliva.</p>
-                                <div class="d-grid gap-2">                  
-                                  <button class="btn btn-primary button ">Añadir</button>
-                                </div>
-                              </div>
-                            </div>              
-                          </div>              
-                          <div class="col d-flex justify-content-center mb-4">
-                            <div class="card shadow mb-1  rounded" style="width: 20rem;">
-                              <h5 class="card-title pt-2 text-center ">Fondue de Queso y Champiñones</h5>
+                    <div class="tab-pane fade" id="tabs-1-1">    
+                    <div class="container-items">
+                      <div class="item">
+                        <figure>
+                          <img class="imagen card-img-top" src="images/entrada1.jpg" alt="Candied Tomato bruschetta">
+                        </figure>
+                        <div class="info-product">
+                          <h2>Candied Tomato Bruschetta</h2>
+                          <p class="price">Bs50</p>
+                          <p class="card-text text-black-50 description">Pan tostado cubierto con tomates caramelizados, albahaca fresca y aceite de oliva.</p>
+                          <button class="btn-add-cart">Añadir al carrito</button>
+                        </div>
+                          </div>
+
+                          <div class="item">
+                            <figure>
                               <img  class="imagen" src="images/entrada2.jpg" class="card-img-top" alt="...">
-                              <div class="card-body  ">
-                                <h5 class="text">
-                                  Precio: <span class=precio>40 Bs</span>
-                                </h5>
-                                <p class="card-text  text-black-50 description">Mezcla cremosa de quesos fundidos con champiñones frescos, perfecta para compartir y disfrutar con trozos de pan.</p>
-                                <div class="d-grid gap-2">                  
-                                  <button class="btn btn-primary button ">Añadir</button>
-                                </div>
-                              </div>
-                            </div>                            
+                            </figure>
+                            <div class="info-product">
+                              <h2>Fondue de Queso y Champiñones</h2>
+                              <p class="price">Bs40</p>
+                              <p class="card-text text-black-50 description">Mezcla cremosa de quesos fundidos con champiñones frescos, perfecta para compartir y disfrutar con trozos de pan.</p>
+                              <button class="btn-add-cart">Añadir al carrito</button>
+                            </div>
                           </div>
-                          <div class="col d-flex justify-content-center mb-4">
-                            <div class="card shadow mb-1  rounded" style="width: 20rem;">
-                              <h5 class="card-title pt-2 text-center ">Volovanes</h5>
+
+                          <div class="item">
+                            <figure>
                               <img  class="imagen" src="images/entrada3.jpg" class="card-img-top" alt="...">
-                              <div class="card-body  ">
-                                <h5 class="text">
-                                  Precio: <span class=precio>7 Bs</span>
-                                </h5>
-                                <p class="card-text  text-black-50 description">Pequeños recipientes de hojaldre rellenos con ingredientes salados o dulces.</p>
-                                <div class="d-grid gap-2">                  
-                                  <button class="btn btn-primary button ">Añadir</button>
-                                </div>
-                              </div>
-                            </div>                            
+                            </figure>
+                            <div class="info-product">
+                              <h2>Volovanes</h2>
+                              <p class="price">Bs7</p>
+                              <p class="card-text text-black-50 description">Mezcla cremosa de quesos fundidos con champiñones frescos, perfecta para compartir y disfrutar con trozos de pan.</p>
+                              <button class="btn-add-cart">Añadir al carrito</button>
+                            </div>
                           </div>
-                          <div class="col d-flex justify-content-center mb-4">
-                            <div class="card shadow mb-1  rounded" style="width: 20rem;">
-                              <h5 class="card-title pt-2 text-center ">Blinis</h5>
+
+                          <div class="item">
+                            <figure>
                               <img  class="imagen" src="images/entrada4.jpg" class="card-img-top" alt="...">
-                              <div class="card-body  ">
-                                <h5 class="text">
-                                  Precio: <span class=precio>15 Bs</span>
-                                </h5>
-                                <p class="card-text  text-black-50 description">Pequeños panqueques esponjosos, con una variedad de acompañamientos como crema agria, caviar o salmón ahumado.</p>
-                                <div class="d-grid gap-2">                  
-                                  <button class="btn btn-primary button ">Añadir</button>
-                                </div>
-                              </div>
-                            </div>                            
+                            </figure>
+                            <div class="info-product">
+                              <h2>Blinis</h2>
+                              <p class="price">Bs15</p>
+                              <p class="card-text text-black-50 description">Pequeños panqueques esponjosos, con una variedad de acompañamientos como crema agria, caviar o salmón ahumado.</p>
+                              <button class="btn-add-cart">Añadir al carrito</button>
+                            </div>
                           </div>
-                          <div class="col d-flex justify-content-center mb-4">
-                            <div class="card shadow mb-1  rounded" style="width: 20rem;">
-                              <h5 class="card-title pt-2 text-center |">Tartar de langostino</h5>
-                              <img   class="imagen" src="images/entrada5.jpg" class="card-img-top" alt="...">
-                              <div class="card-body  ">
-                                <h5 class="text">
-                                  Precio: <span class=precio>17 Bs</span>
-                                </h5>
-                                <p class="card-text  text-black-50 description">Delicada mezcla de langostinos frescos picados, con ingredientes como limón, cebolla y hierbas.</p>
-                                <div class="d-grid gap-2">                  
-                                  <button class="btn btn-primary button ">Añadir</button>
-                                </div>
-                              </div>
-                            </div>                            
+
+                          <div class="item">
+                            <figure>
+                              <img  class="imagen" src="images/entrada5.jpg" class="card-img-top" alt="...">
+                            </figure>
+                            <div class="info-product">
+                              <h2>Tartar de langostino</h2>
+                              <p class="price">Bs17</p>
+                              <p class="card-text text-black-50 description">Delicada mezcla de langostinos frescos picados, con ingredientes como limón, cebolla y hierbas.</p>
+                              <button class="btn-add-cart">Añadir al carrito</button>
+                            </div>
                           </div>
-                          <div class="col d-flex justify-content-center mb-4">
-                            <div class="card shadow mb-1  rounded" style="width: 20rem;">
-                              <h5 class="card-title pt-2 text-center |">Capanés</h5>
-                              <img   class="imagen" src="images/entrada6.jpg" class="card-img-top" alt="...">
-                              <div class="card-body  ">
-                                <h5 class="text">
-                                  Precio: <span class=precio>13 Bs</span>
-                                </h5>
-                                <p class="card-text  text-black-50 description">Cubiertos con una mezcla cremosa de queso ricotta y tomate fresco, aderezados con albahaca y aceite de oliva.</p>
-                                <div class="d-grid gap-2">                  
-                                  <button class="btn btn-primary button ">Añadir</button>
-                                </div>
-                              </div>
-                            </div>                            
+
+                          <div class="item">
+                            <figure>
+                              <img  class="imagen" src="images/entrada6.jpg" class="card-img-top" alt="...">
+                            </figure>
+                            <div class="info-product">
+                              <h2>Capanés</h2>
+                              <p class="price">Bs13</p>
+                              <p class="card-text text-black-50 description">Cubiertos con una mezcla cremosa de queso ricotta y tomate fresco, aderezados con albahaca y aceite de oliva.</p>
+                              <button class="btn-add-cart">Añadir al carrito</button>
+                            </div>
                           </div>
-                          <div class="col d-flex justify-content-center mb-4">
-                            <div class="card shadow mb-1  rounded" style="width: 20rem;">
-                              <h5 class="card-title pt-2 text-center |">Crostini Caprese</h5>
-                              <img   class="imagen" src="images/entrada7.jpg" class="card-img-top" alt="...">
-                              <div class="card-body  ">
-                                <h5 class="text">
-                                  Precio: <span class=precio>9 Bs</span>
-                                </h5>
-                                <p class="card-text  text-black-50 description">Rebanadas crujientes de pan tostado, cubiertas con tomate fresco, mozzarella y albahaca.</p>
-                                <div class="d-grid gap-2">                  
-                                  <button class="btn btn-primary button ">Añadir</button>
-                                </div>
-                              </div>
-                            </div>                            
+
+                          <div class="item">
+                            <figure>
+                              <img  class="imagen" src="images/entrada7.jpg" class="card-img-top" alt="...">
+                            </figure>
+                            <div class="info-product">
+                              <h2>Crostini Caprese</h2>
+                              <p class="price">Bs9</p>
+                              <p class="card-text text-black-50 description">Rebanadas crujientes de pan tostado, cubiertas con tomate fresco, mozzarella y albahaca.</p>
+                              <button class="btn-add-cart">Añadir al carrito</button>
+                            </div>
                           </div>
-                          <div class="col d-flex justify-content-center mb-4">
-                            <div class="card shadow mb-1  rounded" style="width: 20rem;">
-                              <h5 class="card-title pt-2 text-center |">Papa Hasselback</h5>
-                              <img   class="imagen" src="images/entrada8.jpg" class="card-img-top" alt="...">
-                              <div class="card-body  ">
-                                <h5 class="text">
-                                  Precio: <span class=precio>8 Bs</span>
-                                </h5>
-                                <p class="card-text  text-black-50 description">Una papa entera cortada en rodajas finas casi hasta la base, aderezada con mantequilla, ajo y hierbas.</p>
-                                <div class="d-grid gap-2">                  
-                                  <button class="btn btn-primary button ">Añadir</button>
-                                </div>
-                              </div>
-                            </div>                            
+
+                          <div class="item">
+                            <figure>
+                              <img  class="imagen" src="images/entrada8.jpg" class="card-img-top" alt="...">
+                            </figure>
+                            <div class="info-product">
+                              <h2>Papa Hasselback</h2>
+                              <p class="price">Bs10</p>
+                              <p class="card-text text-black-50 description">Una papa entera cortada en rodajas finas casi hasta la base, aderezada con mantequilla, ajo y hierbas.</p>
+                              <button class="btn-add-cart">Añadir al carrito</button>
+                            </div>
                           </div>
-                          <div class="col d-flex justify-content-center mb-4">
-                            <div class="card shadow mb-1  rounded" style="width: 20rem;">
-                              <h5 class="card-title pt-2 text-center |">Mini burguer</h5>
-                              <img   class="imagen" src="images/entrada9.jpg" class="card-img-top" alt="...">
-                              <div class="card-body  ">
-                                <h5 class="text">
-                                  Precio: <span class=precio>5 Bs</span>
-                                </h5>
-                                <p class="card-text  text-black-50 description">Pequeña hamburguesa, ideal para un bocadillo rápido y delicioso.</p>
-                                <div class="d-grid gap-2">                  
-                                  <button class="btn btn-primary button ">Añadir</button>
-                                </div>
-                              </div>
-                            </div>                            
-                          </div>              
-                        </div>
-                      </div>
-                      <!-- PLATOS PRINCIPALES -->
-                      <div class="tab-pane fade" id="tabs-1-2">
-                        <div class="row row cols-sm-1 row cols-md-2 row cols-lg-3  row cols-xl-4">
-                          <div class="col d-flex justify-content-center mb-4">
-                            <div class="card shadow mb-1  rounded" style="width: 20rem;">
-                              <h5 class="card-title pt-2 text-center ">Medallones de Pollo</h5>
-                              <img  class="imagen" src="images/plato6.jpg" class="card-img-top" alt="...">
-                              <div class="card-body  ">
-                                <h5 class="text">
-                                  Precio: <span class=precio>20 Bs</span>
-                                </h5>
-                                <p class="card-text  text-black-50 description">Pequeñas porciones de pechuga de pollo marinadas y cocinadas.</p>
-                                <div class="d-grid gap-2">                  
-                                  <button class="btn btn-primary button ">Añadir</button>
-                                </div>
-                              </div>
-                            </div>              
-                          </div>              
-                          <div class="col d-flex justify-content-center mb-4">
-                            <div class="card shadow mb-1  rounded" style="width: 20rem;">
-                              <h5 class="card-title pt-2 text-center ">Cordero con setas</h5>
-                              <img  class="imagen" src="images/plato5.jpg" class="card-img-top" alt="...">
-                              <div class="card-body  ">
-                                <h5 class="text">
-                                  Precio: <span class=precio>30 Bs</span>
-                                </h5>
-                                <p class="card-text  text-black-50 description">Deliciosa preparación de cordero tierno deshuesado, cocinado lentamente con una mezcla de setas aromáticas.</p>
-                                <div class="d-grid gap-2">                  
-                                  <button class="btn btn-primary button ">Añadir</button>
-                                </div>
-                              </div>
-                            </div>                            
+
+                          <div class="item">
+                            <figure>
+                              <img  class="imagen" src="images/entrada9.jpg" class="card-img-top" alt="...">
+                            </figure>
+                            <div class="info-product">
+                              <h2>Mini burguer</h2>
+                              <p class="price">Bs20</p>
+                              <p class="card-text text-black-50 description">Pequeña hamburguesa, ideal para un bocadillo rápido y delicioso.</p>
+                              <button class="btn-add-cart">Añadir al carrito</button>
+                            </div>
                           </div>
-                          <div class="col d-flex justify-content-center mb-4">
-                            <div class="card shadow mb-1  rounded" style="width: 20rem;">
-                              <h5 class="card-title pt-2 text-center ">Cerdo Caramelizado Vietnamita</h5>
-                              <img  class="imagen" src="images/plato4.jpg" class="card-img-top" alt="...">
-                              <div class="card-body  ">
-                                <h5 class="text">
-                                  Precio: <span class=precio>125 Bs</span>
-                                </h5>
-                                <p class="card-text  text-black-50 description">Cortes de cerdo cocidos lentamente en una salsa de caramelo dulce y especiada.</p>
-                                <div class="d-grid gap-2">                  
-                                  <button class="btn btn-primary button ">Añadir</button>
-                                </div>
+                    </div>
+                    </div>
+
+                    <!------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+                    <!-- PLATOS PRINCIPALES -->
+                    <div class="tab-pane fade" id="tabs-1-2" role="tabpanel" aria-labelledby="tabs-2-tab">
+                      <div class="container-items">
+
+                            <div class="item">
+                              <figure>
+                                <img  class="imagen" src="images/plato6.jpg" class="card-img-top" alt="...">
+                              </figure>
+                              <div class="info-product">
+                                <h2>Medallones de Pollo</h2>
+                                <p class="price">Bs20</p>
+                                <p class="card-text text-black-50 description">Pequeñas porciones de pechuga de pollo marinadas y cocinadas</p>
+                                <button class="btn-add-cart">Añadir al carrito</button>
                               </div>
-                            </div>                            
-                          </div>
-                          <div class="col d-flex justify-content-center mb-4">
-                            <div class="card shadow mb-1  rounded" style="width: 20rem;">
-                              <h5 class="card-title pt-2 text-center ">Porchetta</h5>
-                              <img  class="imagen" src="images/about-us-1-518x434.jpg" class="card-img-top" alt="...">
-                              <div class="card-body  ">
-                                <h5 class="text">
-                                  Precio: <span class=precio>70 Bs</span>
-                                </h5>
-                                <p class="card-text  text-black-50 description">Cerdo deshuesado y sazonado, asado lentamente hasta quedar crujiente y jugoso.</p>
-                                <div class="d-grid gap-2">                  
-                                  <button class="btn btn-primary button ">Añadir</button>
                                 </div>
-                              </div>
-                            </div>                            
-                          </div>
-                          <div class="col d-flex justify-content-center mb-4">
-                            <div class="card shadow mb-1  rounded" style="width: 20rem;">
-                              <h5 class="card-title pt-2 text-center |">Kimchi</h5>
-                              <img   class="imagen" src="images/plato3.jpg" class="card-img-top" alt="...">
-                              <div class="card-body  ">
-                                <h5 class="text">
-                                  Precio: <span class=precio>25 Bs</span>
-                                </h5>
-                                <p class="card-text  text-black-50 description">hecho con verduras fermentadas, col china y rábanos, sazonadas con una mezcla de ajo, jengibre, pimientos rojos</p>
-                                <div class="d-grid gap-2">                  
-                                  <button class="btn btn-primary button ">Añadir</button>
+  
+                                <div class="item">
+                                  <figure>
+                                    <img  class="imagen" src="images/plato5.jpg" class="card-img-top" alt="...">
+                                  </figure>
+                                  <div class="info-product">
+                                    <h2>Cordero con setas</h2>
+                                    <p class="price">Bs60</p>
+                                    <p class="card-text text-black-50 description">Deliciosa preparación de cordero tierno deshuesado, cocinado lentamente con una mezcla de setas aromáticas..</p>
+                                    <button class="btn-add-cart">Añadir al carrito</button>
+                                  </div>
                                 </div>
-                              </div>
-                            </div>                            
-                          </div>
-                          <div class="col d-flex justify-content-center mb-4">
-                            <div class="card shadow mb-1  rounded" style="width: 20rem;">
-                              <h5 class="card-title pt-2 text-center |">Osobuco</h5>
-                              <img   class="imagen" src="images/plato7.jpg" class="card-img-top" alt="...">
-                              <div class="card-body  ">
-                                <h5 class="text">
-                                  Precio: <span class=precio>57 Bs</span>
-                                </h5>
-                                <p class="card-text  text-black-50 description">Carne de ternera, cocida lentamente hasta quedar tierna, generalmente servido con una sabrosa salsa de verduras y vino.</p>
-                                <div class="d-grid gap-2">                  
-                                  <button class="btn btn-primary button ">Añadir</button>
+  
+                                <div class="item">
+                                  <figure>
+                                    <img  class="imagen" src="images/plato4.jpg" class="card-img-top" alt="...">
+                                  </figure>
+                                  <div class="info-product">
+                                    <h2>Cerdo Caramelizado Vietnamita</h2>
+                                    <p class="price">Bs125</p>
+                                    <p class="card-text text-black-50 description">Cortes de cerdo cocidos lentamente en una salsa de caramelo dulce y especiada.</p>
+                                    <button class="btn-add-cart">Añadir al carrito</button>
+                                  </div>
                                 </div>
-                              </div>
-                            </div>                            
-                          </div>                       
-                        </div>
-                      </div>
-                      <!-- POSTRES -->
-                      <div class="tab-pane fade" id="tabs-1-3">
-                        <div class="row row cols-sm-1 row cols-md-2 row cols-lg-3  row cols-xl-4">
-                          <div class="col d-flex justify-content-center mb-4">
-                            <div class="card shadow mb-1  rounded" style="width: 20rem;">
-                              <h5 class="card-title pt-2 text-center ">Croissant de Tiramisú</h5>
-                              <img  class="imagen" src="images/postre1.jpg" class="card-img-top" alt="...">
-                              <div class="card-body  ">
-                                <h5 class="text">
-                                  Precio: <span class=precio>23 Bs</span>
-                                </h5>
-                                <p class="card-text  text-black-50 description">Hojaldre crujiente relleno de una mezcla cremosa de mascarpone, café y cacao, inspirado en el clásico postre italiano.</p>
-                                <div class="d-grid gap-2">                  
-                                  <button class="btn btn-primary button ">Añadir</button>
+  
+                                <div class="item">
+                                  <figure>
+                                    <img  class="imagen" src="images/plato2.jpg" class="card-img-top" alt="...">
+                                  </figure>
+                                  <div class="info-product">
+                                    <h2>Porchetta</h2>
+                                    <p class="price">Bs75</p>
+                                    <p class="card-text text-black-50 description">Pequeños panqueques esponjosos, con una variedad de acompañamientos como crema agria, caviar o salmón ahumado.</p>
+                                    <button class="btn-add-cart">Añadir al carrito</button>
+                                  </div>
                                 </div>
-                              </div>
-                            </div>              
-                          </div>              
-                          <div class="col d-flex justify-content-center mb-4">
-                            <div class="card shadow mb-1  rounded" style="width: 20rem;">
-                              <h5 class="card-title pt-2 text-center ">Tarta de Cereza</h5>
-                              <img  class="imagen" src="images/postreTartarCereza2.jpg" class="card-img-top" alt="...">
-                              <div class="card-body  ">
-                                <h5 class="text">
-                                  Precio: <span class=precio>30 Bs</span>
-                                </h5>
-                                <p class="card-text  text-black-50 description">Delicioso pastel con base de masa quebrada, relleno de cerezas frescas o en conserva, y cubierto con un suave glaseado o migajas crujientes.</p>
-                                <div class="d-grid gap-2">                  
-                                  <button class="btn btn-primary button ">Añadir</button>
-                                </div>
-                              </div>
-                            </div>                            
-                          </div>
-                          <div class="col d-flex justify-content-center mb-4">
-                            <div class="card shadow mb-1  rounded" style="width: 20rem;">
-                              <h5 class="card-title pt-2 text-center ">Tarta de Queso</h5>
-                              <img  class="imagen" src="images/postreTartaQueso3.jpg" class="card-img-top" alt="...">
-                              <div class="card-body  ">
-                                <h5 class="text">
-                                  Precio: <span class=precio>25 Bs</span>
-                                </h5>
-                                <p class="card-text  text-black-50 description">Postre cremoso hecho a base de queso crema sobre una base de galletas, a menudo adornado con frutas o salsas.</p>
-                                <div class="d-grid gap-2">                  
-                                  <button class="btn btn-primary button ">Añadir</button>
-                                </div>
-                              </div>
-                            </div>                            
-                          </div>
-                          <div class="col d-flex justify-content-center mb-4">
-                            <div class="card shadow mb-1  rounded" style="width: 20rem;">
-                              <h5 class="card-title pt-2 text-center ">Cheesecake de Maracuyá</h5>
-                              <img  class="imagen" src="images/postreCheeseCakeMaracuya4.jpg" class="card-img-top" alt="...">
-                              <div class="card-body  ">
-                                <h5 class="text">
-                                  Precio: <span class=precio>9 Bs</span>
-                                </h5>
-                                <p class="card-text  text-black-50 description">Versión tropical del clásico cheesecake, incorporando la exótica y refrescante fruta de la pasión tanto en el relleno como en la cobertura.</p>
-                                <div class="d-grid gap-2">                  
-                                  <button class="btn btn-primary button ">Añadir</button>
-                                </div>
-                              </div>
-                            </div>                            
-                          </div>
-                          <div class="col d-flex justify-content-center mb-4">
-                            <div class="card shadow mb-1  rounded" style="width: 20rem;">
-                              <h5 class="card-title pt-2 text-center |">Mousse de Chocolate</h5>
-                              <img   class="imagen" src="images/postreChocolateMousse5.jpg" class="card-img-top" alt="...">
-                              <div class="card-body  ">
-                                <h5 class="text">
-                                  Precio: <span class=precio>8 Bs</span>
-                                </h5>
-                                <p class="card-text  text-black-50 description">Hecho con chocolate derretido y mezclado con clara de huevo batida o crema, proporcionando una textura suave y esponjosa.</p>
-                                <div class="d-grid gap-2">                  
-                                  <button class="btn btn-primary button ">Añadir</button>
-                                </div>
-                              </div>
-                            </div>                            
-                          </div>
-                          <div class="col d-flex justify-content-center mb-4">
-                            <div class="card shadow mb-1  rounded" style="width: 20rem;">
-                              <h5 class="card-title pt-2 text-center |">Panqueques</h5>
-                              <img   class="imagen" src="images/postrePanqueques6.jpg" class="card-img-top" alt="...">
-                              <div class="card-body  ">
-                                <h5 class="text">
-                                  Precio: <span class=precio>32 Bs</span>
-                                </h5>
-                                <p class="card-text  text-black-50 description">Deliciosas tortitas ligeras y esponjosas, típicamente servidas con jarabe de arce, frutas, crema batida o diversos ingredientes dulces.</p>
-                                <div class="d-grid gap-2">                  
-                                  <button class="btn btn-primary button ">Añadir</button>
-                                </div>
-                              </div>
-                            </div>                            
-                          </div>                       
-                        </div>
-                      </div>
-                       <!-- BEBIDAS -->
-                       <div class="tab-pane fade" id="tabs-1-4">
-                        <div class="row row cols-sm-1 row cols-md-2 row cols-lg-3  row cols-xl-4">
-                          <div class="col d-flex justify-content-center mb-4">
-                            <div class="card shadow mb-1  rounded" style="width: 20rem;">
-                              <h5 class="card-title pt-2 text-center ">Limonada</h5>
-                              <img  class="imagen" src="images/images_menu/limonada.jpg" class="card-img-top" alt="...">
-                              <div class="card-body  ">
-                                <h5 class="text">
-                                  Precio: <span class=precio>23 Bs</span>
-                                </h5>
-                                <p class="card-text  text-black-50 description">Refrescante y vibrante, con el equilibrio perfecto entre el dulzor y la acidez natural del limón, ideal para revitalizar tus sentidos. 🍋</p>
-                                <div class="d-grid gap-2">                  
-                                  <button class="btn btn-primary button ">Añadir</button>
-                                </div>
-                              </div>
-                            </div>              
-                          </div>              
-                          <div class="col d-flex justify-content-center mb-4">
-                            <div class="card shadow mb-1  rounded" style="width: 20rem;">
-                              <h5 class="card-title pt-2 text-center ">Winter Wonerland Mocktail</h5>
-                              <img  class="imagen" src="images/images_menu/WinterWonerland.jpg" class="card-img-top" alt="...">
-                              <div class="card-body  ">
-                                <h5 class="text">
-                                  Precio: <span class=precio>30 Bs</span>
-                                </h5>
-                                <p class="card-text  text-black-50 description"> Una mezcla mágica de sabores invernales con un toque especiado y afrutado que te transporta a un paisaje nevado en cada sorbo. ❄️✨.</p>
-                                <div class="d-grid gap-2">                  
-                                  <button class="btn btn-primary button ">Añadir</button>
-                                </div>
-                              </div>
-                            </div>                            
-                          </div>
-                          <div class="col d-flex justify-content-center mb-4">
-                            <div class="card shadow mb-1  rounded" style="width: 20rem;">
-                              <h5 class="card-title pt-2 text-center ">Raspberry Hibiscus latte</h5>
-                              <img  class="imagen" src="images/images_menu/RaspberryHibiscus.jpg" class="card-img-top" alt="...">
-                              <div class="card-body  ">
-                                <h5 class="text">
-                                  Precio: <span class=precio>25 Bs</span>
-                                </h5>
-                                <p class="card-text  text-black-50 description">Un latte cálido y reconfortante con la dulzura de la frambuesa, un toque floral de hibisco y una textura aterciopelada. 🌺🍓</p>
-                                <div class="d-grid gap-2">                  
-                                  <button class="btn btn-primary button ">Añadir</button>
-                                </div>
-                              </div>
-                            </div>                            
-                          </div>
-                          <div class="col d-flex justify-content-center mb-4">
-                            <div class="card shadow mb-1  rounded" style="width: 20rem;">
-                              <h5 class="card-title pt-2 text-center ">Blue Lychee</h5>
-                              <img  class="imagen" src="images/images_menu/blueLychee.jpg" class="card-img-top" alt="...">
-                              <div class="card-body  ">
-                                <h5 class="text">
-                                  Precio: <span class=precio>9 Bs</span>
-                                </h5>
-                                <p class="card-text  text-black-50 description">Exótica y vibrante, esta bebida combina el sutil dulzor del lichi con un toque azul que te hará sentir como en el paraíso. 💙🍹</p>
-                                <div class="d-grid gap-2">                  
-                                  <button class="btn btn-primary button ">Añadir</button>
-                                </div>
-                              </div>
-                            </div>                            
-                          </div>
-                          <div class="col d-flex justify-content-center mb-4">
-                            <div class="card shadow mb-1  rounded" style="width: 20rem;">
-                              <h5 class="card-title pt-2 text-center |">Silent Ocean</h5>
-                              <img   class="imagen" src="images/images_menu/SILENTOCEAN.jpg" class="card-img-top" alt="...">
-                              <div class="card-body  ">
-                                <h5 class="text">
-                                  Precio: <span class=precio>8 Bs</span>
-                                </h5>
-                                <p class="card-text  text-black-50 description">Sereno y refrescante, con matices frutales y un toque de misterio, esta bebida es como una brisa marina en un vaso. 🌊🌌</p>
-                                <div class="d-grid gap-2">                  
-                                  <button class="btn btn-primary button ">Añadir</button>
-                                </div>
-                              </div>
-                            </div>                            
-                          </div>
-                          <div class="col d-flex justify-content-center mb-4">
-                            <div class="card shadow mb-1  rounded" style="width: 20rem;">
-                              <h5 class="card-title pt-2 text-center ">Iced Latte</h5>
-                              <img   class="imagen" src="images/images_menu/Iced Latte.jpg" class="card-img-top" alt="...">
-                              <div class="card-body  ">
-                                <h5 class="text">
-                                  Precio: <span class=precio>32 Bs</span>
-                                </h5>
-                                <p class="card-text  text-black-50 description">Un clásico refrescante, con espresso suave y leche cremosa servidos sobre hielo, perfecto para un impulso energético con un toque elegante. ☕❄️</p>
-                                <div class="d-grid gap-2">                  
-                                  <button class="btn btn-primary button ">Añadir</button>
-                                </div>
+  
+                            <div class="item">
+                              <figure>
+                                <img  class="imagen" src="images/plato3.jpg" class="card-img-top" alt="...">
+                              </figure>
+                              <div class="info-product">
+                                <h2>Kimchi</h2>
+                                <p class="price">Bs17</p>
+                                  <p class="card-text text-black-50 description">Hecho con verduras fermentadas, col china y rábanos, sazonadas con una mezcla de ajo, jengibre, pimientos rojos.</p>
+                                <button class="btn-add-cart">Añadir al carrito</button>
                               </div>
                             </div>
-                          </div>  
+  
+                            <div class="item">
+                              <figure>
+                                <img  class="imagen" src="images/entrada6.jpg" class="card-img-top" alt="...">
+                              </figure>
+                              <div class="info-product">
+                                <h2>Capanés</h2>
+                                <p class="price">Bs13</p>
+                                <p class="card-text text-black-50 description">Cubiertos con una mezcla cremosa de queso ricotta y tomate fresco, aderezados con albahaca y aceite de oliva.</p>
+                                <button class="btn-add-cart">Añadir al carrito</button>
+                              </div>
+                            </div>
+  
+                            <div class="item">
+                              <figure>
+                                <img  class="imagen" src="images/entrada7.jpg" class="card-img-top" alt="...">
+                              </figure>
+                              <div class="info-product">
+                                <h2>Crostini Caprese</h2>
+                                <p class="price">Bs9</p>
+                                <p class="card-text text-black-50 description">Rebanadas crujientes de pan tostado, cubiertas con tomate fresco, mozzarella y albahaca.</p>
+                                <button class="btn-add-cart">Añadir al carrito</button>
+                              </div>
+                            </div>
+  
+                            <div class="item">
+                              <figure>
+                                <img  class="imagen" src="images/entrada8.jpg" class="card-img-top" alt="...">
+                              </figure>
+                              <div class="info-product">
+                                <h2>Papa Hasselback</h2>
+                                <p class="price">Bs10</p>
+                                <p class="card-text text-black-50 description">Una papa entera cortada en rodajas finas casi hasta la base, aderezada con mantequilla, ajo y hierbas.</p>
+                                <button class="btn-add-cart">Añadir al carrito</button>
+                              </div>
+                            </div>
+  
+                            <div class="item">
+                              <figure>
+                                <img  class="imagen" src="images/entrada9.jpg" class="card-img-top" alt="...">
+                              </figure>
+                              <div class="info-product">
+                                <h2>Mini burguer</h2>
+                                <p class="price">Bs20</p>
+                                <p class="card-text text-black-50 description">Pequeña hamburguesa, ideal para un bocadillo rápido y delicioso.</p>
+                                <button class="btn-add-cart">Añadir al carrito</button>
+                              </div>
+                            </div>
+                      </div>
+                      </div>
+
+                       <!------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+                      <!-- POSTRES -->
+                      <div class="tab-pane fade" id="tabs-1-3" role="tabpanel" aria-labelledby="tabs-2-tab">
+                        <div class="container-items">
+  
+                                <div class="item">
+                                  <figure>
+                                    <img  class="imagen" src="images/postre1.jpg" class="card-img-top" alt="...">
+                                  </figure>
+                                  <div class="info-product">
+                                    <h2>Croissant de Tiramisú</h2>
+                                    <p class="price">Bs25</p>
+                                    <p class="card-text text-black-50 description">Hojaldre crujiente relleno de una mezcla cremosa de mascarpone, café y cacao, inspirado en el clásico postre italiano.</p>
+                                    <button class="btn-add-cart">Añadir al carrito</button>
+                                  </div>
+                                </div>
+
+                                <div class="item">
+                                  <figure>
+                                    <img  class="imagen" src="images/postreTartarCereza2.jpg" class="card-img-top" alt="...">
+                                  </figure>
+                                  <div class="info-product">
+                                    <h2>Tarta de Cereza</h2>
+                                    <p class="price">Bs30</p>
+                                    <p class="card-text text-black-50 description">Delicioso pastel con base de masa quebrada, relleno de cerezas frescas o en conserva, y cubierto con un suave glaseado o migajas crujientes.</p>
+                                    <button class="btn-add-cart">Añadir al carrito</button>
+                                  </div>
+                                </div>
+                                
+                                <div class="item">
+                                  <figure>
+                                    <img  class="imagen" src="images/postreTartaQueso3.jpg" class="card-img-top" alt="...">
+                                  </figure>
+                                  <div class="info-product">
+                                    <h2>Tarta de Queso</h2>
+                                    <p class="price">Bs21</p>
+                                    <p class="card-text text-black-50 description">Postre cremoso hecho a base de queso crema sobre una base de galletas, a menudo adornado con frutas o salsas.</p>
+                                    <button class="btn-add-cart">Añadir al carrito</button>
+                                  </div>
+                                </div>
+
+                                <div class="item">
+                                  <figure>
+                                    <img class="imagen" src="images/postreCheeseCakeMaracuya4.jpg" class="card-img-top" alt="...">
+                                  </figure>
+                                  <div class="info-product">
+                                    <h2>Cheesecake de Maracuyá</h2>
+                                    <p class="price">Bs15</p>
+                                    <p class="card-text text-black-50 description">Versión tropical del clásico cheesecake, incorporando la exótica y refrescante fruta de la pasión tanto en el relleno como en la cobertura.</p>
+                                    <button class="btn-add-cart">Añadir al carrito</button>
+                                  </div>
+                                </div>
+                                
+                                <div class="item">
+                                  <figure>
+                                    <img class="imagen" src="images/postreChocolateMousse5.jpg" class="card-img-top" alt="...">
+                                  </figure>
+                                  <div class="info-product">
+                                    <h2>Mousse de Chocolate</h2>
+                                    <p class="price">Bs8</p>
+                                    <p class="card-text text-black-50 description">Hecho con chocolate derretido y mezclado con clara de huevo batida o crema, proporcionando una textura suave y esponjosa.</p>
+                                    <button class="btn-add-cart">Añadir al carrito</button>
+                                  </div>
+                                </div>
+                                
+                                <div class="item">
+                                  <figure>
+                                    <img class="imagen" src="images/postrePanqueques6.jpg" class="card-img-top" alt="...">
+                                  </figure>
+                                  <div class="info-product">
+                                    <h2>Panqueques</h2>
+                                    <p class="price">Bs18</p>
+                                    <p class="card-text text-black-50 description">Deliciosas tortitas ligeras y esponjosas, típicamente servidas con jarabe de arce, frutas, crema batida o diversos ingredientes dulces.</p>
+                                    <button class="btn-add-cart">Añadir al carrito</button>
+                                  </div>
+                                </div>
                         </div>
                       </div>
-                    </div>
-                  </div>
+
+                      <!------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+                       <!-- BEBIDAS -->
+                       <div class="tab-pane fade" id="tabs-1-4" role="tabpanel" aria-labelledby="tabs-2-tab">
+                        <div class="container-items">
+                       
+
+                          <div class="item">
+                            <figure>
+                              <img class="imagen" src="images/images_menu/limonada.jpg" class="card-img-top" alt="...">
+                            </figure>
+                            <div class="info-product">
+                              <h2>Limonada</h2>
+                              <p class="price">Bs21</p>
+                              <p class="card-text text-black-50 description">Refrescante y vibrante, con el equilibrio perfecto entre el dulzor y la acidez natural del limón, ideal para revitalizar tus sentidos.</p>
+                              <button class="btn-add-cart">Añadir al carrito</button>
+                            </div>
+                          </div>
+
+                          <div class="item">
+                            <figure>
+                              <img class="imagen" src="images/images_menu/WinterWonerland.jpg" class="card-img-top" alt="...">
+                            </figure>
+                            <div class="info-product">
+                              <h2>Winter Wonerland Mocktail</h2>
+                              <p class="price">Bs30</p>
+                              <p class="card-text text-black-50 description">Una mezcla mágica de sabores invernales con un toque especiado y afrutado que te transporta a un paisaje nevado en cada sorbo.</p>
+                              <button class="btn-add-cart">Añadir al carrito</button>
+                            </div>
+                          </div>
+                          
+                          <div class="item">
+                            <figure>
+                              <img class="imagen" src="images/images_menu/RaspberryHibiscus.jpg" class="card-img-top" alt="...">
+                            </figure>
+                            <div class="info-product">
+                              <h2>Blue Lychee</h2>
+                              <p class="price">Bs21</p>
+                              <p class="card-text text-black-50 description">Exótica y vibrante, esta bebida combina el sutil dulzor del lichi con un toque azul que te hará sentir como en el paraíso.</p>
+                              <button class="btn-add-cart">Añadir al carrito</button>
+                            </div>
+                          </div>
+
+                          <div class="item">
+                            <figure>
+                              <img class="imagen" src="images/images_menu/SILENTOCEAN.jpg" class="card-img-top" alt="...">
+                            </figure>
+                            <div class="info-product">
+                              <h2>Silent Ocean</h2>
+                              <p class="price">Bs10.9</p>
+                              <p class="card-text text-black-50 description">Sereno y refrescante, con matices frutales y un toque de misterio, esta bebida es como una brisa marina en un vaso.</p>
+                              <button class="btn-add-cart">Añadir al carrito</button>
+                            </div>
+                          </div>
+                          
+                          <div class="item">
+                            <figure>
+                              <img class="imagen" src="images/images_menu/Iced Latte.jpg" class="card-img-top" alt="...">
+                            </figure>
+                            <div class="info-product">
+                              <h2>Iced Latte</h2>
+                              <p class="price">Bs8</p>
+                              <p class="card-text text-black-50 description">Un clásico refrescante, con espresso suave y leche cremosa servidos sobre hielo, perfecto para un impulso energético con un toque elegante.</p>
+                              <button class="btn-add-cart">Añadir al carrito</button>
+                            </div>
+                          </div>
+                          
+                          <div class="item">
+                            <figure>
+                              <img class="imagen" src="images/images_menu/RaspberryHibiscus.jpg" class="card-img-top" alt="...">
+                            </figure>
+                            <div class="info-product">
+                              <h2>Raspberry Hibiscus latte</h2>
+                              <p class="price">Bs18</p>
+                              <p class="card-text text-black-50 description">Un latte cálido y reconfortante con la dulzura de la frambuesa, un toque floral de hibisco y una textura aterciopelada.</p>
+                              <button class="btn-add-cart">Añadir al carrito</button>
+                            </div>
+                          </div>
                 </div>
               </div>   
           
@@ -577,5 +595,6 @@
     <script src="js/core.min.js"></script>
     <script src="js/script.js"></script>
     <script src="js/carrito.js"></script>
+    <script src="js/funcionamiento_carrito.js"></script>
 </body>
 </html>

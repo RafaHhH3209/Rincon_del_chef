@@ -1,18 +1,16 @@
 .presentacion{
-  font-weight: 600;
-  font-style: italic;
+  font-size: 5pc;
   font-family: "Parkinsans", sans-serif;
-  font-optical-sizing: auto;
   font-style: normal;
   text-align: center;
   justify-content: center;
-  padding: 10pc, 0,0,50pc;
+  margin-top: 10pc;
+  margin-bottom: 5pc;
 }
 .description{
     height: 25px;
     overflow: hidden;
     transition: height .3s ease-in .3s ;
-    
 }
 .description:hover{
     height: 80px;
@@ -50,4 +48,36 @@
 .descr
 {
     font-size: 2pc;
+    text-align: center;
+    justify-content: center;
+}
+
+.BotonMenu a
+{
+
+    align-items: center;
+    justify-content: center;
+}
+.botones
+{
+	margin: 50px;
+	position: relative;
+	overflow: hidden;
+	display: inline-block;
+	padding: 14px 35px;
+	font-size: 15px;
+	line-height: 1.25;
+	border: 1px solid;
+	border-radius: 0;
+	font-family: "Poppins", sans-serif;
+	font-weight: 600;
+	letter-spacing: 0;
+	text-transform: uppercase;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	text-align: center;
+	cursor: pointer;
+	vertical-align: middle;
+	user-select: none;
+	transition: 250ms all ease-in-out;
 }
