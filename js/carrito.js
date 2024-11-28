@@ -32,6 +32,7 @@ function addItemCarritoItem(newItem){
 }
 
 function renderCarrito(){
+    
     tbody.innerHTML = ''
     carrito.map(item => {
         const tr = document.createElement('tr')
