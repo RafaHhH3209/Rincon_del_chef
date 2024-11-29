@@ -13714,3 +13714,27 @@ html .dtp .invisible {
 {
 	font-size: 5pc;
 }
+.contenedor-menu
+{
+	background-color: #a9a9a9;
+}
+
+.ubicacion {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+}
+
+iframe {
+    border: 0;
+}
+
+.ubicacion-text
+{
+	text-align: center;
+	justify-content: center;
+	letter-spacing: 0.01em;
+	padding-bottom: 10px;
+	font-size: 3pc;
+}
