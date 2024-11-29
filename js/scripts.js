@@ -79,17 +79,19 @@ function renderCarrito(){
   CarritoTotal()
 }
 
+/*CONVERTIR A BS */
 function CarritoTotal(){
   let Total = 0;
   const itemCartTotal = document.querySelector('.itemCartTotal')
   carrito.forEach((item) => {
-    const precio = Number(item.precio.replace("$", ''))
-    Total = Total + precio*item.cantidad
+    const precio = Number(item.precio.replace("Bs", '').trim())
+    Total = Total + precio * item.cantidad
   })
 
-  itemCartTotal.innerHTML = `Total Bs${Total}`
+  itemCartTotal.innerHTML = `Total Bs ${Total}`
   addLocalStorage()
 }
+
 
 function removeItemCarrito(e){
   const buttonDelete = e.target

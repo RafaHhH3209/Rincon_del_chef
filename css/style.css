@@ -7020,12 +7020,12 @@ html.tablet .ui-to-top {
 }
 
 .rd-navbar-static .rd-nav-item.active .rd-nav-link {
-	color: #41A451;
+	color: #ffff;
 	background: transparent;
 }
 
 .rd-navbar-static .rd-nav-item.active > .rd-navbar-submenu-toggle {
-	color: #41A451;
+	color: #fff;
 }
 
 .rd-navbar-static .rd-nav-item.focus > .rd-navbar-submenu-toggle::before,
@@ -13704,3 +13704,13 @@ html .dtp .invisible {
 	overflow: hidden;
 }
 
+/*ELEMENTOS NO SE SUPERPONGAN*/
+.tab-pane {
+	position: relative;
+	padding: 20px; /* Asegura espacio interno */
+  }
+  
+.text-menu
+{
+	font-size: 5pc;
+}

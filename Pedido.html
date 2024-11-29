@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#bla"  />
-    <title>vanilla Javascript</title>
+    <title>Rincon del Chef</title>
     
 
     <!-- CSS only -->
@@ -38,7 +38,7 @@
   </head>
   
   <body>
-    <header class="container-fluid bg-dark position-sticky top-0">
+    <header class="container-fluid bg-secondary position-sticky top-0">
       <ul
         class="nav nav-pills mb-3 py-3 container"
         id="pills-tab"
@@ -71,6 +71,17 @@
             >Carrito</a
           >
         </li>
+        <li class="nav-item" role="presentation">
+              <a 
+              class="nav-link"
+              type="button"
+              role="tab"
+              aria-controls="pills-contact"
+              aria-selected="false"
+              href="index.html">Inicio
+            </a>
+            </li>
+        </li>
       </ul>
     </header>
 
@@ -90,16 +101,15 @@
       >
         1
       </div>
-      <div
-        class="tab-pane fade show active container"
-        id="pills-profile"
-        role="tabpanel"
-        aria-labelledby="pills-profile-tab">
+      <div class="tab-pane fade show active container" 
+          id="pills-profile" 
+          role="tabpanel" 
+          aria-labelledby="pills-profile-tab" 
+          style="min-height: 500px; overflow-y: auto;">
 
+<!-- ENTRADA -->
         <h2 class="h1 m-5 text-secondary text-center">Platillos De Entrada</h2>
-
         <div class="row row-cols-sm-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4">
-
           <div class="col d-flex justify-content-center mb-4">
             <div class="card shadow mb-1 bg-white rounded" style="width: 20rem;">
               <h5 class="card-title pt-2 text-center text-black">Candied Tomato bruschetta</h5>
@@ -211,11 +221,274 @@
               </div>
             </div>
           </div>
+
         </div>
+<!-- PLATOS PRINCIPALES -->
+        <h2 class="h1 m-5 text-secondary text-center">Platillos Principales</h2>
+        <div class="row row-cols-sm-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4">
+          <div class="col d-flex justify-content-center mb-4">
+            <div class="card shadow mb-1 bg-white rounded" style="width: 20rem;">
+              <h5 class="card-title pt-2 text-center text-black">Medallones de Pollo</h5>
+              <img src="images/plato6.jpg" class="card-img-top" alt="Medallones de Pollo">
+              <div class="card-body">
+                <p class="card-text text-black-50 description">Pequeñas porciones de pechuga de pollo marinadas y cocinadas.</p>
+                <h5 class="text-black">Precio: <span class="precio">30 Bs</span></h5>
+                <div class="d-grid gap-2">
+                <button  class="btn btn-secondary button">Añadir a Carrito</button>
+              </div>
+              </div>
+            </div>
+          </div>
 
-<!------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+          <div class="col d-flex justify-content-center mb-4">
+            <div class="card shadow mb-1 bg-white rounded" style="width: 20rem;">
+              <h5 class="card-title pt-2 text-center text-black">Cordero con setas</h5>
+              <img src="images/plato5.jpg" class="card-img-top" alt="Cordero con setas">
+              <div class="card-body">
+                <p class="card-text text-black-50 description">Deliciosa preparación de cordero tierno deshuesado, cocinado lentamente con una mezcla de setas aromáticas.</p>
+                <h5 class="text-black">Precio: <span class="precio">35 Bs</span></h5>
+                <div class="d-grid gap-2">
+                <button  class="btn btn-secondary button">Añadir a Carrito</button>
+              </div>
+              </div>
+            </div>
+          </div>
 
+          <div class="col d-flex justify-content-center mb-4">
+            <div class="card shadow mb-1 bg-white rounded" style="width: 20rem;">
+              <h5 class="card-title pt-2 text-center text-darck">Cerdo Caramelizado Vietnamita</h5>
+              <img src="images/plato4.jpg" class="card-img-top" alt="Cerdo Caramelizado Vietnamita">
+              <div class="card-body">
+                <p class="card-text text-dark-50 description">Cortes de cerdo cocidos lentamente en una salsa de caramelo dulce y especiada.</p>
+                <h5 class="text-dark">Precio: <span class="precio">110 Bs</span></h5>
+                <div class="d-grid gap-2">
+                <button  class="btn btn-secondary button">Añadir a Carrito</button>
+              </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col d-flex justify-content-center mb-4">
+            <div class="card shadow mb-1 bg-white rounded" style="width: 20rem;">
+              <h5 class="card-title pt-2 text-center text-darck">Porchetta</h5>
+              <img src="images/plato2.jpg" class="card-img-top" alt="Porchetta">
+              <div class="card-body">
+                <p class="card-text text-dark-50 description">Cerdo deshuesado y sazonado, asado lentamente hasta quedar crujiente y jugoso.</p>
+                <h5 class="text-darck">Precio: <span class="precio">65 Bs</span></h5>
+                <div class="d-grid gap-2">
+                <button  class="btn btn-secondary button">Añadir a Carrito</button>
+              </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col d-flex justify-content-center mb-4">
+            <div class="card shadow mb-1 bg-white rounded" style="width: 20rem;">
+              <h5 class="card-title pt-2 text-center text-darck">Kimchi</h5>
+              <img src="images/plato3.jpg" class="card-img-top" alt="Kimchi">
+              <div class="card-body">
+                <p class="card-text text-dark-50 description">Hecho con verduras fermentadas, col china y rábanos, sazonadas con una mezcla de ajo, jengibre, pimientos rojos.</p>
+                <h5 class="text-darck">Precio: <span class="precio">25 Bs</span></h5>
+                <div class="d-grid gap-2">
+                <button  class="btn btn-secondary button">Añadir a Carrito</button>
+              </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col d-flex justify-content-center mb-4">
+            <div class="card shadow mb-1 bg-white rounded" style="width: 20rem;">
+              <h5 class="card-title pt-2 text-center text-darck">Osobuco</h5>
+              <img src="images/plato7.jpg" class="card-img-top" alt="Osobuco">
+              <div class="card-body">
+                <p class="card-text text-darck-50 description">Carne de ternera, cocida lentamente hasta quedar tierna, generalmente servido con una sabrosa salsa de verduras y vino.</p>
+                <h5 class="text-darck">Precio: <span class="precio">57 Bs</span></h5>
+                <div class="d-grid gap-2">
+                <button  class="btn btn-secondary button">Añadir a Carrito</button>
+              </div>
+              </div>
+            </div>
+          </div>
+
+        </div>  
+<!-- POSTRES -->
+        <h2 class="h1 m-5 text-secondary text-center">Postres</h2>
+        <div class="row row-cols-sm-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4">
+          <div class="col d-flex justify-content-center mb-4">
+            <div class="card shadow mb-1 bg-white rounded" style="width: 20rem;">
+              <h5 class="card-title pt-2 text-center text-black">Croissant de Tiramisú</h5>
+              <img src="images/postre1.jpg" class="card-img-top" alt="Croissant de Tiramisú">
+              <div class="card-body">
+                <p class="card-text text-black-50 description">Hojaldre crujiente relleno de una mezcla cremosa de mascarpone, café y cacao, inspirado en el clásico postre italiano.</p>
+                <h5 class="text-black">Precio: <span class="precio">27 Bs</span></h5>
+                <div class="d-grid gap-2">
+                <button  class="btn btn-secondary button">Añadir a Carrito</button>
+              </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col d-flex justify-content-center mb-4">
+            <div class="card shadow mb-1 bg-white rounded" style="width: 20rem;">
+              <h5 class="card-title pt-2 text-center text-black">Tarta de Cereza</h5>
+              <img src="images/postreTartarCereza2.jpg" class="card-img-top" alt="Tarta de Cereza">
+              <div class="card-body">
+                <p class="card-text text-black-50 description">Delicioso pastel con base de masa quebrada, relleno de cerezas frescas o en conserva, y cubierto con un suave glaseado o migajas crujientes.</p>
+                <h5 class="text-black">Precio: <span class="precio">37 Bs</span></h5>
+                <div class="d-grid gap-2">
+                <button  class="btn btn-secondary button">Añadir a Carrito</button>
+              </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col d-flex justify-content-center mb-4">
+            <div class="card shadow mb-1 bg-white rounded" style="width: 20rem;">
+              <h5 class="card-title pt-2 text-center text-darck">Tarta de Queso</h5>
+              <img src="images/postreTartaQueso3.jpg" class="card-img-top" alt="Tarta de Queso">
+              <div class="card-body">
+                <p class="card-text text-dark-50 description">Postre cremoso hecho a base de queso crema sobre una base de galletas, a menudo adornado con frutas o salsas.</p>
+                <h5 class="text-dark">Precio: <span class="precio">27 Bs</span></h5>
+                <div class="d-grid gap-2">
+                <button  class="btn btn-secondary button">Añadir a Carrito</button>
+              </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col d-flex justify-content-center mb-4">
+            <div class="card shadow mb-1 bg-white rounded" style="width: 20rem;">
+              <h5 class="card-title pt-2 text-center text-darck">Cheesecake de Maracuyá</h5>
+              <img src="images/postreCheeseCakeMaracuya4.jpg" class="card-img-top" alt="Cheesecake de Maracuyá">
+              <div class="card-body">
+                <p class="card-text text-dark-50 description">Versión tropical del clásico cheesecake, incorporando la exótica y refrescante fruta de la pasión tanto en el relleno como en la cobertura.</p>
+                <h5 class="text-darck">Precio: <span class="precio">25 Bs</span></h5>
+                <div class="d-grid gap-2">
+                <button  class="btn btn-secondary button">Añadir a Carrito</button>
+              </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col d-flex justify-content-center mb-4">
+            <div class="card shadow mb-1 bg-white rounded" style="width: 20rem;">
+              <h5 class="card-title pt-2 text-center text-darck">Mousse de Chocolate</h5>
+              <img src="images/postreChocolateMousse5.jpg" class="card-img-top" alt="Mousse de Chocolate">
+              <div class="card-body">
+                <p class="card-text text-dark-50 description">Hecho con chocolate derretido y mezclado con clara de huevo batida o crema, proporcionando una textura suave y esponjosa.</p>
+                <h5 class="text-darck">Precio: <span class="precio">15 Bs</span></h5>
+                <div class="d-grid gap-2">
+                <button  class="btn btn-secondary button">Añadir a Carrito</button>
+              </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col d-flex justify-content-center mb-4">
+            <div class="card shadow mb-1 bg-white rounded" style="width: 20rem;">
+              <h5 class="card-title pt-2 text-center text-darck">Panqueques</h5>
+              <img src="images/postrePanqueques6.jpg" class="card-img-top" alt="Panqueques">
+              <div class="card-body">
+                <p class="card-text text-darck-50 description">Deliciosas tortitas ligeras y esponjosas, típicamente servidas con jarabe de arce, frutas, crema batida o diversos ingredientes dulces.</p>
+                <h5 class="text-darck">Precio: <span class="precio">33 Bs</span></h5>
+                <div class="d-grid gap-2">
+                <button  class="btn btn-secondary button">Añadir a Carrito</button>
+              </div>
+              </div>
+            </div>
+          </div>
+
+        </div>  
+<!-- BEBIDAS -->
+        <h2 class="h1 m-5 text-secondary text-center">Bebidas</h2>
+        <div class="row row-cols-sm-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4">
+          <div class="col d-flex justify-content-center mb-4">
+            <div class="card shadow mb-1 bg-white rounded" style="width: 20rem;">
+              <h5 class="card-title pt-2 text-center text-black">Limonada</h5>
+              <img src="images/images_menu/limonada.jpg" class="card-img-top" alt="Limonada">
+              <div class="card-body">
+                <p class="card-text text-black-50 description">Refrescante y vibrante, con el equilibrio perfecto entre el dulzor y la acidez natural del limón, ideal para revitalizar tus sentidos.</p>
+                <h5 class="text-black">Precio: <span class="precio">27 Bs</span></h5>
+                <div class="d-grid gap-2">
+                <button  class="btn btn-secondary button">Añadir a Carrito</button>
+              </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col d-flex justify-content-center mb-4">
+            <div class="card shadow mb-1 bg-white rounded" style="width: 20rem;">
+              <h5 class="card-title pt-2 text-center text-black">Winter Wonerland Mocktail</h5>
+              <img src="images/images_menu/WinterWonerland.jpg" class="card-img-top" alt="Winter Wonerland Mocktail">
+              <div class="card-body">
+                <p class="card-text text-black-50 description">Una mezcla mágica de sabores invernales con un toque especiado y afrutado que te transporta a un paisaje nevado en cada sorbo.</p>
+                <h5 class="text-black">Precio: <span class="precio">40 Bs</span></h5>
+                <div class="d-grid gap-2">
+                <button  class="btn btn-secondary button">Añadir a Carrito</button>
+              </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col d-flex justify-content-center mb-4">
+            <div class="card shadow mb-1 bg-white rounded" style="width: 20rem;">
+              <h5 class="card-title pt-2 text-center text-darck">Blue Lychee</h5>
+              <img src="images/images_menu/RaspberryHibiscus.jpg" class="card-img-top" alt="Blue Lychee">
+              <div class="card-body">
+                <p class="card-text text-dark-50 description">Exótica y vibrante, esta bebida combina el sutil dulzor del lichi con un toque azul que te hará sentir como en el paraíso.</p>
+                <h5 class="text-dark">Precio: <span class="precio">17 Bs</span></h5>
+                <div class="d-grid gap-2">
+                <button  class="btn btn-secondary button">Añadir a Carrito</button>
+              </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col d-flex justify-content-center mb-4">
+            <div class="card shadow mb-1 bg-white rounded" style="width: 20rem;">
+              <h5 class="card-title pt-2 text-center text-darck">Silent Ocean</h5>
+              <img src="images/images_menu/SILENTOCEAN.jpg" class="card-img-top" alt="Silent Ocean">
+              <div class="card-body">
+                <p class="card-text text-dark-50 description">Sereno y refrescante, con matices frutales y un toque de misterio, esta bebida es como una brisa marina en un vaso.</p>
+                <h5 class="text-darck">Precio: <span class="precio">15.5 Bs</span></h5>
+                <div class="d-grid gap-2">
+                <button  class="btn btn-secondary button">Añadir a Carrito</button>
+              </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col d-flex justify-content-center mb-4">
+            <div class="card shadow mb-1 bg-white rounded" style="width: 20rem;">
+              <h5 class="card-title pt-2 text-center text-darck">Iced Latte</h5>
+              <img src="images/images_menu/Iced Latte.jpg" class="card-img-top" alt="Iced Latte">
+              <div class="card-body">
+                <p class="card-text text-dark-50 description">Un clásico refrescante, con espresso suave y leche cremosa servidos sobre hielo, perfecto para un impulso energético con un toque elegante.</p>
+                <h5 class="text-darck">Precio: <span class="precio">Bs 12.9</span></h5>
+                <div class="d-grid gap-2">
+                <button  class="btn btn-secondary button">Añadir a Carrito</button>
+              </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col d-flex justify-content-center mb-4">
+            <div class="card shadow mb-1 bg-white rounded" style="width: 20rem;">
+              <h5 class="card-title pt-2 text-center text-darck">Raspberry Hibiscus latte</h5>
+              <img src="images/images_menu/RaspberryHibiscus.jpg" class="card-img-top" alt="Raspberry Hibiscus latte">
+              <div class="card-body">
+                <p class="card-text text-darck-50 description">Un latte cálido y reconfortante con la dulzura de la frambuesa, un toque floral de hibisco y una textura aterciopelada.</p>
+                <h5 class="text-darck">Precio: <span class="precio">23 Bs</span></h5>
+                <div class="d-grid gap-2">
+                <button  class="btn btn-secondary button">Añadir a Carrito</button>
+              </div>
+              </div>
+            </div>
+          </div>
+
+        </div> 
       </div>
+      
       <div
         class="tab-pane fade carrito"
         id="pills-contact"
@@ -258,7 +531,6 @@
             <div class="col-12"><a href="index.html"><img src="images/logo-default1-140x57.png" alt="" width="140" height="57" srcset="images/logo-default-280x113.png 2x"/></a></div>
             <div class="col-12">
               <ul class="footer-minimal-nav">
-                <li><a href="#menu">Nuestro Menu</a></li>
                 <li><a href="contacts.html">Contacto</a></li>
                 <li><a href="about-us.html">Sobre Nosotras</a></li>
               </ul>
