@@ -87,7 +87,7 @@ function CarritoTotal(){
     Total = Total + precio*item.cantidad
   })
 
-  itemCartTotal.innerHTML = `Total Bs${Total}`
+  itemCartTotal.innerHTML = `Total $${Total}`
   addLocalStorage()
 }
 
